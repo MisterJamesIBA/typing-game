@@ -2,7 +2,7 @@
 
 function loadLink(data) {
     try {
-        const url = `/play.html?data=${data}`;
+        const url = `/typing-game/play.html?data=${data}`;
         if (typeof url === "string") {
             //window.location.href = url;
             openWindow(url);
