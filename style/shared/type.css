@@ -1,6 +1,13 @@
 .ui-screen {
     height: 20%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ui-screen div{
+    width: 33%;
+    height: 100%;
 }
 
 .type-screen {
@@ -44,5 +51,14 @@
 
 .hit {
     background-color: rgb(78, 78, 78);
+    color: white;
+}
+
+.typed {
+    background-color: yellow;
+}
+
+.next {
+    background-color: gray;
     color: white;
 }
