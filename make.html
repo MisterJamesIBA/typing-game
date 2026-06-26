@@ -20,7 +20,7 @@
         <div class="main">
             <div class="ui-screen">
                 <button id="testBtn">test</button>
-                <button>share</button>
+                <button id="openBtn">share</button>
             </div>
             <div class="type-screen">
                 <textarea name="" id="textarea"></textarea>
@@ -44,6 +44,17 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div id="shareScreen" class="hide control-screen">
+        <div class="control-inner">
+            <h1>Share</h1>
+            <div style="width: 90%;height: 40%;">
+               <textarea name="" id="copyText"></textarea> 
+            </div>
+            <button id="copyBtn">Copy Link</button>
+            <button id="closeBtn">Close</button>
+        </div>
     </div>
 
     <script src="./js/script.js"></script>

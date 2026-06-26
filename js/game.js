@@ -52,6 +52,7 @@ window.addEventListener("keydown", (e) => {
 
     if (index == string.length) {
         console.log('win');
+        document.querySelector("#endScreen").classList.remove('hide');
     }
 });
 
@@ -65,9 +66,9 @@ window.addEventListener("keyup", (e) => {
 window.onload = function () {
     document.querySelector("#startBtn").addEventListener('click', () => {
         startTest();
-        document.querySelector(".control-screen").classList.add('hide');
+        document.querySelector("#startScreen").classList.add('hide');
 
-        setInterval(() => {
+        let handle = setInterval(() => {
             second += 1;
 
             if (second >= 60) {
@@ -79,6 +80,10 @@ window.onload = function () {
             let ss = (second < 10) ? "0" + second : second;
 
             timeHandle.innerHTML = `${ms}:${ss}`;
+
+            if (index == string.length) {
+                clearInterval(handle);
+            }
         }, 1000);
     });
 }

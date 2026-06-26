@@ -29,10 +29,32 @@ window.onload = function () {
     let testBtn = document.querySelector('#testBtn');
     let textArea = document.querySelector('#textarea');
 
+    let openBtn = document.querySelector('#openBtn');
+    let closeBtn = document.querySelector('#closeBtn');
+
+    let copyText = document.querySelector('#copyText');
+    let copyBtn = document.querySelector("#copyBtn");
+
+    let shareScreen = document.querySelector('#shareScreen');
 
     testBtn.addEventListener('click', () => {
         console.log(textArea.value);
         loadLink(textArea.value);
+    });
+
+    openBtn.addEventListener("click", ()=>{
+        shareScreen.classList.remove('hide');
+        const url = `${window.location.host}/play.html?data=${textArea.value}`.replaceAll(" ", "%");
+        copyText.value = url;
+    });
+
+    closeBtn.addEventListener("click", ()=>{
+        shareScreen.classList.add('hide');
+    });
+
+    copyBtn.addEventListener("click", ()=>{
+        const url = `${window.location.host}/play.html?data=${textArea.value}`.replaceAll(" ", "%");
+        navigator.clipboard.writeText(url);
     });
 
 }

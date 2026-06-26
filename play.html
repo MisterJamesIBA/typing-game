@@ -45,10 +45,17 @@
     </div>
     </div>
 
-    <div class="control-screen">
+    <div id="startScreen" class="control-screen">
         <div class="control-inner">
             <h1>Press start to play</h1>
             <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="endScreen" class="hide control-screen">
+        <div class="control-inner">
+            <h1>Finish</h1>
+            <button onclick="window.location.reload()">Reset</button>
         </div>
     </div>
 
